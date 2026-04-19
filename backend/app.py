@@ -28,12 +28,11 @@ app.include_router(management_router)
 app.include_router(dynamic_router)
 
 
-# ✅ CRITICAL FIX
 @app.on_event("startup")
 async def startup():
     from backend.services.registry_service import init_db_pool, init_db
-    await init_db_pool()
-    await init_db()
+    await init_db_pool()   # no-op for psycopg2, safe to keep
+    init_db()              # sync — creates tables if they don't exist
 
 
 @app.get("/")

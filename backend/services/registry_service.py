@@ -9,7 +9,7 @@ import secrets
 from contextlib import contextmanager
 from datetime import datetime
 from typing import Dict, List, Optional
-
+from dotenv import load_dotenv 
 import bcrypt
 import psycopg2
 import psycopg2.extras
@@ -20,6 +20,8 @@ from backend.models.endpoint_model import (
     EndpointConfigUpdate,
     InputField,
 )
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -68,15 +70,17 @@ _DDL_STATEMENTS = [
 ]
 
 
-def _init_db() -> None:
+async def init_db_pool() -> None:
+    """No-op for psycopg2 (sync driver) — satisfies the startup hook."""
+    pass
+
+
+def init_db() -> None:
     with _conn() as con:
         cur = con.cursor()
         for stmt in _DDL_STATEMENTS:
             cur.execute(stmt)
     logger.info("Supabase DB initialized.")
-
-
-_init_db()
 
 
 # ── Password helpers ───────────────────────────────────────────────────────────
