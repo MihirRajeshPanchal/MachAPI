@@ -12,7 +12,7 @@ logging.basicConfig(
 )
 
 app = FastAPI(
-    title="BlazeAPI — Dynamic AI Endpoint Builder",
+    title="MachAPI — Dynamic AI Endpoint Builder",
     description=(
         "Register custom AI-powered endpoints at runtime. "
         "Each endpoint is namespaced by username: `/{username}/{endpoint_name}`. "

@@ -1,2 +1,2 @@
-# BlazeAPI
+# MachAPI
 Dynamic AI API Generation
