@@ -3,7 +3,7 @@ import './globals.css';
 import { AuthProvider } from '@/hooks/useAuth';
 
 export const metadata: Metadata = {
-  title: 'MachAPI — Dynamic AI Endpoint Builder',
+  title: 'MachAPI',
   description: 'Register custom AI-powered endpoints at runtime',
 };
 

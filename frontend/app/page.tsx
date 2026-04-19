@@ -234,7 +234,7 @@ export default function LandingPage() {
             <span style={{ color: 'var(--text-dim)', fontSize: 11, marginLeft: 8 }}>POST /mihir/sentiment-analyzer</span>
           </div>
           <div style={{ padding: '20px 24px', fontSize: 12, lineHeight: 2 }}>
-            <div><span style={{ color: 'var(--text-dim)' }}>$</span> <span style={{ color: 'var(--accent)' }}>curl</span> <span style={{ color: 'var(--text-secondary)' }}>-X POST https://machapi.vercel.app/mihir/sentiment-analyzer</span></div>
+            <div><span style={{ color: 'var(--text-dim)' }}>$</span> <span style={{ color: 'var(--accent)' }}>curl</span> <span style={{ color: 'var(--text-secondary)' }}>-X POST https://ai-machapi.vercel.app/mihir/sentiment-analyzer</span></div>
             <div style={{ color: 'var(--text-dim)', paddingLeft: 16 }}>{`{ "inputs": { "text": "I love this product!" } }`}</div>
             <div style={{ marginTop: 12, color: 'var(--text-dim)' }}>→</div>
             <div style={{ color: 'var(--accent)', paddingLeft: 16 }}>{`{ "sentiment": "positive", "confidence": 0.97 }`}</div>

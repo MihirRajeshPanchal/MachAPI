@@ -594,8 +594,8 @@ export default function APIBuilder() {
           <div style={{ fontSize: 13, color: 'var(--accent)' }}>
             {`${
               typeof window !== 'undefined'
-                ? 'https://machapi.vercel.app/'
-                : 'https://machapi.vercel.app/'
+                ? 'https://ai-machapi.vercel.app'
+                : 'https://ai-machapi.vercel.app'
             }/${username}/${name}`}
           </div>
         </div>
