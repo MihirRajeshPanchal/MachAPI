@@ -99,7 +99,6 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
             <div style={{ fontSize: 12, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
               {username}
             </div>
-            <div style={{ fontSize: 10, color: 'var(--accent)' }}>● online</div>
           </div>
         </div>
 

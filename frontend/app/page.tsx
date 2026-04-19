@@ -102,7 +102,7 @@ export default function LandingPage() {
         </div>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
           <a
-            href="https://github.com"
+            href="https://github.com/MihirRajeshPanchal/MachAPI"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-ghost"
@@ -114,7 +114,7 @@ export default function LandingPage() {
             GitHub
           </a>
           <Link href="/login">
-            <button className="btn-ghost" style={{ padding: '8px 16px', fontSize: 12 }}>Login</button>
+            <button className="btn-ghost" style={{ padding: '8px 16px', fontSize: 13 }}>Login</button>
           </Link>
           <Link href="/login?mode=register">
             <button className="btn-primary" style={{ padding: '8px 16px', fontSize: 12 }}>Sign Up</button>
@@ -143,7 +143,7 @@ export default function LandingPage() {
           fontWeight: 700,
           letterSpacing: '-0.02em',
           lineHeight: 1.0,
-          marginBottom: 12,
+          marginBottom: 6,
         }}>
           MACH<span style={{ color: 'var(--accent)' }}>API</span>
         </h1>
@@ -153,7 +153,7 @@ export default function LandingPage() {
           color: 'var(--accent)',
           fontWeight: 300,
           letterSpacing: '0.15em',
-          marginBottom: 32,
+          marginBottom: 16,
           height: '1.4em',
         }}>
           {displayed}<span className="cursor-blink" style={{ color: 'var(--accent)' }}>_</span>
@@ -164,14 +164,14 @@ export default function LandingPage() {
           color: 'var(--text-secondary)',
           fontSize: 15,
           lineHeight: 1.8,
-          marginBottom: 48,
+          marginBottom: 24,
           fontFamily: "'IBM Plex Sans', sans-serif",
         }}>
           Register custom AI-powered endpoints at runtime.<br />
           Define inputs, set a prompt, get a typed JSON API — instantly.
         </p>
 
-        <div className="fade-up fade-up-4" style={{ display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 64 }}>
+        <div className="fade-up fade-up-4" style={{ display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center' }}>
           <Link href="/login?mode=register">
             <button className="btn-primary" style={{ fontSize: 14, padding: '14px 28px' }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -180,18 +180,18 @@ export default function LandingPage() {
               Start Building
             </button>
           </Link>
-          <a href="http://localhost:8000/docs" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/MihirRajeshPanchal/MachAPI" target="_blank" rel="noopener noreferrer">
             <button className="btn-ghost" style={{ fontSize: 14, padding: '14px 28px' }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/>
-              </svg>
-              View Docs
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+              View on GitHub
             </button>
           </a>
         </div>
 
         {/* Feature pills */}
-        <div className="fade-up fade-up-5" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
+        {/* <div className="fade-up fade-up-5" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
           {[
             '⚡ Runtime Endpoint Registration',
             '🧠 Gemini AI Backed',
@@ -207,7 +207,7 @@ export default function LandingPage() {
               fontSize: 12,
             }}>{f}</span>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Terminal preview */}
@@ -234,7 +234,7 @@ export default function LandingPage() {
             <span style={{ color: 'var(--text-dim)', fontSize: 11, marginLeft: 8 }}>POST /mihir/sentiment-analyzer</span>
           </div>
           <div style={{ padding: '20px 24px', fontSize: 12, lineHeight: 2 }}>
-            <div><span style={{ color: 'var(--text-dim)' }}>$</span> <span style={{ color: 'var(--accent)' }}>curl</span> <span style={{ color: 'var(--text-secondary)' }}>-X POST https://api.mach.dev/mihir/sentiment-analyzer</span></div>
+            <div><span style={{ color: 'var(--text-dim)' }}>$</span> <span style={{ color: 'var(--accent)' }}>curl</span> <span style={{ color: 'var(--text-secondary)' }}>-X POST https://machapi.vercel.app/mihir/sentiment-analyzer</span></div>
             <div style={{ color: 'var(--text-dim)', paddingLeft: 16 }}>{`{ "inputs": { "text": "I love this product!" } }`}</div>
             <div style={{ marginTop: 12, color: 'var(--text-dim)' }}>→</div>
             <div style={{ color: 'var(--accent)', paddingLeft: 16 }}>{`{ "sentiment": "positive", "confidence": 0.97 }`}</div>
@@ -252,7 +252,7 @@ export default function LandingPage() {
         position: 'relative',
         zIndex: 10,
       }}>
-        made with <span style={{ color: 'var(--red)' }}>♥</span> by <span style={{ color: 'var(--text-secondary)' }}>Mihir Panchal</span>
+        made with <span style={{ color: 'var(--red)' }}>♥</span> by <span style={{ color: 'var(--text-secondary)' }}><a href="https://mihirrajeshpanchal.github.io/" target="_blank" rel="noopener noreferrer"><span style={{ color: 'var(--accent)' }}>Mihir Panchal</span></a></span>
       </footer>
     </main>
   );
