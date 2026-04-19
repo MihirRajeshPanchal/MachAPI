@@ -7,5 +7,4 @@ langchain-google-genai==2.1.8
 psycopg2-binary==2.9.11
 pydantic==2.11.5
 python-dotenv==1.0.1
-supabase 
 uvicorn==0.34.0

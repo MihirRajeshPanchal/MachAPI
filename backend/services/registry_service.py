@@ -1,5 +1,5 @@
 """
-Persistent endpoint registry backed by Supabase (PostgreSQL via psycopg2).
+Persistent endpoint registry backed by Nile (PostgreSQL via psycopg2).
 All function signatures are identical to the SQLite/Turso versions.
 """
 import json
@@ -27,12 +27,12 @@ logger = logging.getLogger(__name__)
 
 # ── Connection ─────────────────────────────────────────────────────────────────
 
-SUPABASE_DB_URL = os.environ["SUPABASE_DB_URL"]
+NILE_DB_URL = os.environ["NILE_DB_URL"]
 
 
 @contextmanager
 def _conn():
-    con = psycopg2.connect(SUPABASE_DB_URL, cursor_factory=psycopg2.extras.RealDictCursor)
+    con = psycopg2.connect(NILE_DB_URL, cursor_factory=psycopg2.extras.RealDictCursor)
     try:
         yield con
         con.commit()
@@ -80,7 +80,7 @@ def init_db() -> None:
         cur = con.cursor()
         for stmt in _DDL_STATEMENTS:
             cur.execute(stmt)
-    logger.info("Supabase DB initialized.")
+    logger.info("Nile DB initialized.")
 
 
 # ── Password helpers ───────────────────────────────────────────────────────────
